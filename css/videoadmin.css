@@ -1,0 +1,40 @@
+.admin-list-item {
+	float: left;
+	display: block;
+	padding-right: 10px;
+	width: 19%;
+	height: 90px;
+	min-width: 192px;
+}
+
+.admin-list-box textarea {
+	width: 100%;	
+}
+
+
+.admin-list-box {
+	border: solid thin #000;
+	padding: 1%;
+	margin: .5%;
+	position:relative
+}
+
+.admin-list-box .label {
+	font-weight: bold;	
+}
+
+.list-thumbnail-image {
+	max-height: 60px;	
+}
+
+.removelink {
+	position:absolute; top: 0px; right: 0px;
+}
+
+.uplink {
+	position:absolute; top: 20px; right: 0px;
+}
+
+.downlink {
+	position:absolute; top: 40px; right: 0px;
+}

@@ -1,0 +1,36 @@
+/* Fancy Box Open */
+
+.home .fancybox-opened .fancybox-skin{
+background: #7d7e7d; /* Old browsers */
+background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+}
+.home .fancybox-opened .fancybox-skin .fancybox-inner{overflow:hidden!important;}
+.home .fancybox-opened .fancybox-skin .gform_wrapper .gform_heading{margin-bottom:0;}
+.home .fancybox-opened .fancybox-skin .gform_wrapper .gform_heading h3.gform_title{
+color:#fff;
+display:block;
+font-weight:normal;
+font-size:2.3em;
+text-align:center;}
+
+.home .fancybox-opened .fancybox-skin .gform_wrapper .gform_heading .gform_description{
+color:#fff;
+display:block;
+text-align:center;}
+
+.home .fancybox-opened .fancybox-skin .gform_wrapper .gform_body label{color:#fff;}
+
+.home .fancybox-opened .fancybox-skin .gform_wrapper .gform_footer{
+margin:0;
+padding: 0;}
+.home .fancybox-opened .fancybox-skin .gform_wrapper .gform_footer input.button{
+	display:block;
+float: none;
+margin: 15px auto 0;
+	padding: 5px;}

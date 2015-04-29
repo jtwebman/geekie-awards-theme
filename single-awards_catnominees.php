@@ -7,14 +7,14 @@
  * @since TheGeekieAwards 4.0
  */
 
-get_header(); 
+get_header();
 while ( have_posts() ) {
-	the_post(); 
+	the_post();
 	$post_id = get_the_ID();
 
-	$background = 'images/margin_bkgd2.jpg';
+	$background = 'images/margin_bkgd3.jpg';
 	$nominee_background_id = get_post_meta( $post_id  , 'nominee_background' , true );
-	if ( !empty( $nominee_background_id ) ) 
+	if ( !empty( $nominee_background_id ) )
 	{
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $nominee_background_id  ), 'full' );
 		$background = $image[0];
@@ -22,7 +22,7 @@ while ( have_posts() ) {
 
 	$header = '';
 	$nominee_header_id = get_post_meta( $post_id  , 'nominee_header' , true );
-	if ( !empty( $nominee_background_id ) ) 
+	if ( !empty( $nominee_background_id ) )
 	{
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $nominee_header_id  ), 'full' );
 		$header = $image[0];
@@ -85,7 +85,7 @@ while ( have_posts() ) {
                 </div>
 				<?php
 
-				$args = array('orderby' => 'rand', 
+				$args = array('orderby' => 'rand',
 					'nopaging' => 'true',
 					'meta_key' => 'nominated_category',
 					'meta_value' => $post_id
@@ -97,7 +97,7 @@ while ( have_posts() ) {
 			            <div style="position: relative;">
 			                <div class="post-elements-two">
 			                    <ul>
-			                      <?php if ( get_post_meta($post->ID, 'mp3', true) ) { ?> 
+			                      <?php if ( get_post_meta($post->ID, 'mp3', true) ) { ?>
 				                      <li>
 				                      	<a class="fancybox" href="#<?php the_ID(); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/post-music.png" alt=""></a>
 				                      </li>
@@ -109,23 +109,23 @@ while ( have_posts() ) {
 				                            </audio>
 				                        </div>
 				                      </div>
-			                      <?php } ?>            
-			                      
-			                      <?php if ( get_post_meta($post->ID, 'video', true) ) { ?>   
+			                      <?php } ?>
+
+			                      <?php if ( get_post_meta($post->ID, 'video', true) ) { ?>
 				                      <li><a class="fancybox fancybox.iframe" href="<?php echo get_post_meta($post->ID, "video", $single = true); ?>" title="Watch Video!"><img src="<?php bloginfo('template_directory'); ?>/images/post-video.png" alt=""></a>
 				                      </li>
-			                      <?php } ?>          
+			                      <?php } ?>
 			                    </ul>
 			                  </div>
 			            	<figure class="featured"><?php the_post_thumbnail('medium', array('class' => 'post-thumbnail')); ?></figure>
 			            </div>
 					</div>
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<?php endwhile; 
+				<?php endwhile;
 
-				wp_reset_postdata(); 
+				wp_reset_postdata();
 
-				$args = array('orderby' => 'rand', 
+				$args = array('orderby' => 'rand',
 					'order' => 'ASC',
 					'nopaging' => 'true',
 					'meta_query' => array(
@@ -148,8 +148,8 @@ while ( have_posts() ) {
 
 				$loop = new WP_Query($args);
 
-				if ($loop->have_posts()) { 
-					
+				if ($loop->have_posts()) {
+
 					while($loop->have_posts()) {
 						$loop->the_post();
 						$Top10_count++;
@@ -158,7 +158,7 @@ while ( have_posts() ) {
 					wp_reset_postdata();
 				}
 				$nominee_top10_extra = get_post_meta( $post_id  , 'nominee_top10_extra' , true );
-				
+
 				foreach (explode( ',', $nominee_top10_extra ) as $value) {
 					if ($Top10_count < 10) {
 						$Top10_count++;

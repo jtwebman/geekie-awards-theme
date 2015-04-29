@@ -7,14 +7,14 @@
  * @since TheGeekieAwards 4.0
  */
 
-get_header(); 
+get_header();
 while ( have_posts() ) {
-	the_post(); 
+	the_post();
 	$post_id = get_the_ID();
 
-	$background = 'images/margin_bkgd2.jpg';
+	$background = 'images/margin_bkgd3.jpg';
 	$industry_background_id = get_post_meta( $post_id  , 'industry_background' , true );
-	if ( !empty( $industry_background_id ) ) 
+	if ( !empty( $industry_background_id ) )
 	{
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $industry_background_id  ), 'full' );
 		$background = $image[0];
@@ -22,7 +22,7 @@ while ( have_posts() ) {
 
 	$header = '';
 	$industry_header_id = get_post_meta( $post_id  , 'industry_header' , true );
-	if ( !empty( $industry_background_id ) ) 
+	if ( !empty( $industry_background_id ) )
 	{
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id( $industry_header_id  ), 'full' );
 		$header = $image[0];

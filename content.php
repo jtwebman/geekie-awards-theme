@@ -34,11 +34,11 @@ if (!isset($twitter ) || trim($twitter )==='') {
 		</header><!-- .entry-header -->
 		<div class="socialbar">
       <div class="socialshare">Share:</div>
-			<div class="socialshare twitter-share "><a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php echo get_the_title() . ' just entered The Geekie Awards for Best ' . $category_name; ?>" data-via="<?php echo $twitter?>">Tweet</a></div>
+			<div class="socialshare twitter-share "><a href="https://twitter.com/share" class="twitter-share-button" data-text="<?php echo get_the_title() . ' entered The Geekie Awards for Best ' . $category_name; ?>" data-via="<?php echo $twitter?>">Tweet</a></div>
       <div class="socialshare fb-like" data-href="<?php echo get_permalink() ?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
       <div class="socialshare"><div class="g-plusone" data-size="medium" data-annotation="bubble" data-href="<?php echo get_permalink() ?>"></div></div>
-			<div class="socialshare"><a href="//www.pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink()); ?>&media=<?php echo urlencode(wp_get_attachment_url( get_post_thumbnail_id())); ?>&description=<?php echo get_the_title() . ' just entered The Geekie Awards for Best ' . $category_name; ?>" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="white"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png" /></a></div>
-			<div class="socialshare"><a href="http://bufferapp.com/add" class="buffer-add-button" data-text="<?php echo get_the_title() . ' just entered The Geekie Awards for Best ' . $category_name; ?>" data-url="<?php echo get_permalink() ?>" data-count="horizontal" data-via="<?php echo $twitter?>" data-picture="<?php echo wp_get_attachment_url( get_post_thumbnail_id()); ?>" ></a></div>
+			<div class="socialshare"><a href="//www.pinterest.com/pin/create/button/?url=<?php echo urlencode(get_permalink()); ?>&media=<?php echo urlencode(wp_get_attachment_url( get_post_thumbnail_id())); ?>&description=<?php echo get_the_title() . ' entered The Geekie Awards for Best ' . $category_name; ?>" data-pin-do="buttonPin" data-pin-config="beside" data-pin-color="white"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_white_20.png" /></a></div>
+			<div class="socialshare"><a href="http://bufferapp.com/add" class="buffer-add-button" data-text="<?php echo get_the_title() . ' entered The Geekie Awards for Best ' . $category_name; ?>" data-url="<?php echo get_permalink() ?>" data-count="horizontal" data-via="<?php echo $twitter?>" data-picture="<?php echo wp_get_attachment_url( get_post_thumbnail_id()); ?>" ></a></div>
     </div>
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 		<div class="entry-summary">
